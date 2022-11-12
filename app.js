@@ -1,9 +1,13 @@
-const retornoEmpresa1 = new Promise( (resolve, reject) => 
-    setTimeout(resolve, 5000, "Empresa 1") ); 
-const retornoEmpresa2 = new Promise( (resolve, reject) => 
-    setTimeout(resolve, 3000, "Empresa 2") ); 
+function obterClienteNoBancoDeDados(idCliente) {
+  return new Promise( (resolve, reject) => {
+          const cliente = { nome: 'bruce wayne', id: idCliente };
+          resolve(cliente);
+  });
+}
 
-Promise.race([retornoEmpresa1, retornoEmpresa2])
-  .then((empresaMaisVeloz) => {
-    console.log(empresaMaisVeloz);
-  })
+async function processar() {
+  const usuarioBanco = await obterClienteNoBancoDeDados(7);
+  console.log(usuarioBanco);
+}
+
+processar()
