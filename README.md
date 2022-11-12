@@ -1,12 +1,11 @@
 # M1-S6-JS-DevinHouse
 
-Existe uma API pública que retorna a idade média das pessoas que possuem o nome passado como parâmetro.
-Para o cálculo, é usada uma base de dados interna deles, que pode ser subdividida pelo país passado também como parâmetro.
+Quanto será que está a preço do Bitcoin hoje???
+Vamos descobrir!
 
-Faça uma chamada para esta API e descubra a idade média das pessoas com seu nome aqui no Brasil, conforme exemplo abaixo. 
-Imprima o nome e a idade média retornados.
-A idade está representada na propriedade '_age_' do retorno da API:
+Obtenha os dados nessa API : https://api.coincap.io/v2/assets/bitcoin, imprima a frase:
+'_O preço do Bitcoin - <simbolo do bitcoin> em dólares hoje é $ <preço do bitcoin>_`.
 
-https://api.agify.io/?country_id=BR&name=thais
-
-_Obs_.: Se seu nome não constar na base deles (age == null), usar outro nome para os testes.
+Dicas:
+a) Repare que o retorno desta API encapsula os dados dentro de um objeto '_data_'.
+b) Use as propriedades '_symbol_' e '_priceUsd_' do retorno para preencher os valores na frase.
