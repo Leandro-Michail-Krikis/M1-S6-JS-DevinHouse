@@ -10,4 +10,3 @@ function sleep(valor) {
 sleep("banana").then((value) =>{
     console.log(value);
 })
-
