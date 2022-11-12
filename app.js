@@ -1,13 +1,8 @@
-function obterClienteNoBancoDeDados(idCliente) {
-  return new Promise( (resolve, reject) => {
-          const cliente = { nome: 'bruce wayne', id: idCliente };
-          resolve(cliente);
-  });
-}
-
-async function processar() {
-  const usuarioBanco = await obterClienteNoBancoDeDados(7);
-  console.log(usuarioBanco);
-}
-
-processar()
+const requisicao = fetch("https://api.agify.io/?country_id=BR&name=leandro")
+requisicao
+  .then(resposta =>{
+    return resposta.json()
+  })
+  .then(body => {
+    console.log(body);
+  })
